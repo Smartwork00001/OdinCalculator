@@ -27,6 +27,7 @@ const keyToStringMap = {
     "13":"=",
     "equal":"=",
     "dot":".",
+    "110":".",
     "190":".",
     "sqrt": "t",
     "0":"0",
@@ -208,6 +209,7 @@ function buttonClickEvent(event){
 }
 
 function keyDownEvent(event){
+    console.log(event.keyCode);
     eventsController(event.keyCode);
 }
 
