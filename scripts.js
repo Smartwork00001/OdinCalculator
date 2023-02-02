@@ -185,7 +185,7 @@ function eventsController(key){
         if(isNaN(ans)){
             calcAnswer.textContent = "Malformed Expression";
         }else{
-            calcAnswer.textContent = ans.toFixed(6);
+            calcAnswer.textContent = Math.round(ans*1000000)/1000000;
         }
     }else if(key==="ac"){
         shiftKeyOn =false;
