@@ -164,6 +164,9 @@ function evaluateExpression(){
 }
 
 function eventsController(key){
+    if(key === 8){
+        key = "backspace";
+    }
     if(key===shiftKey){
         shiftKeyOn = true;
         return;
@@ -177,6 +180,7 @@ function eventsController(key){
         shiftKeyOn=false;
         let ans = evaluateExpression();
         calcExpression.textContent = "";
+       
         if(isNaN(ans)){
             calcAnswer.textContent = "Malformed Expression";
         }else{
@@ -186,7 +190,7 @@ function eventsController(key){
         shiftKeyOn =false;
         calcExpression.textContent = '';
         calcAnswer.textContent = '';
-    }else if(key==="8" || key === "backspace" ){
+    }else if(key === "backspace" ){
         shiftKeyOn = false;
         let tempExpression = calcExpression.textContent;
         calcExpression.textContent = tempExpression.substring(0,tempExpression.length-1);
