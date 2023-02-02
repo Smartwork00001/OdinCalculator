@@ -209,7 +209,6 @@ function buttonClickEvent(event){
 }
 
 function keyDownEvent(event){
-    console.log(event.keyCode);
     eventsController(event.keyCode);
 }
 
